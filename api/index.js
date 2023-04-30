@@ -141,6 +141,10 @@ app.get('/post/:id', async (req, res) => {
     res.json(postDoc);
 })
 
+app.get("/home", (req, res) => {
+    res.send("This is A Home")
+})
+
 app.listen(4000, () => {
     try {
 
