@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'));
 app.get("/",(req,res)=>{
-    req.send("<h1>Welcome To Blog Server</h1>")
+    res.send("<h1>Welcome To Blog Server</h1>")
 })
 mongoose.set("strictQuery", false);
 mongoose.connect('mongodb+srv://lokesh:lokeshcz@cluster0.dsoakmx.mongodb.net/Blog?retryWrites=true&w=majority', () => {
